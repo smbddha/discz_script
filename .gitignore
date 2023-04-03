@@ -84,3 +84,4 @@ share
 *.py[cod]     # Will match .pyc, .pyo and .pyd files.
 __pycache__/  # Exclude the whole folder
 __pycache__*  # Exclude the whole folder
+config.py
