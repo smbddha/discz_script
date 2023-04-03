@@ -40,16 +40,19 @@ endpoint declines quickly if it is seed with just a single
 artist. This is most likely because if two artists are both related to
 a third artist, there is high likelihood that those two artists are
 themselves also related.
-	The search endpoint returns more artists per request, but is not
+
+The search endpoint returns more artists per request, but is not
 conducive for systematic exploration of artists, as it's not trivial
 to come up with good queries that will return unseen artists at a good
 rate.
-	Similarly the recommendations retrieves new artists in a more
+
+Similarly the recommendations retrieves new artists in a more
 random manner. But its api, accepting lists of seed artists and
 genres, allow for a simplier enumeration/exploration of possible
 inputs, at least compared to the search endpoint that can receive any
 string search parameter.
-	So, in my attempt to retreive all artists in the faster manner I
+
+So, in my attempt to retreive all artists in the faster manner I
 implemented a heuristic that makes use of all endpoints. First, I use
 the search endpoint and query for artists using every letter of the
 alphabet. I then use those results to spawn related and recommendation
