@@ -45,7 +45,7 @@ def main():
             elapsed_mins = f"{_elapsed_mins:.2f}"
             requests_per_minute = f"{num_requests/_elapsed_mins:7.2f}"
 
-            # print status line (rewrite previous) with a little bit of color
+            # print status line (rewrite previous) with a little color
             print(
                 f"{bold('Total artists found')}: {gr(num_artists)} - {bold('total reqs')}: {gr(num_requests)} : {gr(artists_per_minute)} artists/min - {bl(requests_per_minute)} req/min - {bl(artists_per_request)} artists/req - {bl(elapsed_mins)} m elapsed",
                 end="\r",
@@ -54,7 +54,7 @@ def main():
             time.sleep(TICK_RATE)
 
     except KeyboardInterrupt:
-        log.debu("received CTRL-C...")
+        logging.debug("received CTRL-C...")
     finally:
         print("stopping procs/threads...")
         fetcher.stop()
